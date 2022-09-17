@@ -3,7 +3,7 @@
 
 
 def add_age_ten_years
-    puts "How old are you? \nCurrent age is:"
+    print "How old are you? \nCurrent age is: "
     current_age = gets.chomp
     puts "You are gonna be "+ (current_age.to_i + 10).to_s +  " in ten years!"
     puts "You are gonna be "+ (current_age.to_i + 20).to_s +  " in twenty years!"
