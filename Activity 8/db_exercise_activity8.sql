@@ -1,6 +1,4 @@
-
 CREATE TABLE students (
-
 id integer PRIMARY KEY,
 first_name character varying(255) NOT NULL,
 middle_name character varying(255) NOT NULL,
