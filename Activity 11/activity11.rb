@@ -1,10 +1,7 @@
 def disemvowel(str)
-  vowels = ['a','e','i','o','u']
   string_without_vowels = ''
   str.length.times do |i|
-    if !vowels.include?(str[i].downcase)
-      string_without_vowels += str[i]
-    end
+    string_without_vowels += str[i] if !'aeiou'.include? str[i].downcase
   end
   string_without_vowels
 end
