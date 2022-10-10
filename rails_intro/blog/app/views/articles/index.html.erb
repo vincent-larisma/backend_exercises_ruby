@@ -1,0 +1,32 @@
+<h1>Show All Articles</h1>
+
+<table>
+<tr><th>ID</th>
+<th>Title</th>
+<th>Body</th>
+<th>Actions</th>
+
+</tr>
+<% if @articles.length %>
+<%@articles.each do |index| %>
+
+<tr>
+<td><%= index.id %></td>
+<td><%= index.title %></td>
+<td><%= index.body %></td>
+<td><%= link_to "EDIT", edit_article_path(index.id) %> | <%= link_to "DELETE", delete_article_path(index.id),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></td>
+
+</tr>
+<% end %>
+
+<% else %>
+
+<td colspan=3>No Records found!</td>
+
+<% end %>
+
+</table>
+
+<%= link_to "Create New Articles", new_article_path %>
